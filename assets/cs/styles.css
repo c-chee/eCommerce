@@ -2,6 +2,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -9,7 +10,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 7em;
+    height: 8em;
     box-shadow: 0px 1px 5px rgb(62, 62, 62); /* x y blur spread color*/
 }
 
@@ -17,6 +18,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: start;
 }
 
 footer {
@@ -34,9 +36,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     width: 100vw;
-    height: 7em;
+    height: 7.5em;
     text-align: center;
     justify-items: center;
+    margin: 0;
 }
 
 .hamburger-btn {
@@ -146,4 +149,32 @@ footer h2 {
     width: 3em;
     height: auto;
 }
+
+/* === Main === */
+/* -- Hero Section -- */
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.hero-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.106);
+    color: white;
+    font-size: 2em;
+    z-index: 2;
+    position: absolute;
+}
+
 
