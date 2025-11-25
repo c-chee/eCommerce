@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WabiSabi.jp</title>
+
+    <!-- CSS Link -->
+    <link rel = 'stylesheet' href = 'assets/cs/styles.css' defer>
+
+</head>
+<body>
+    <!-- JS Link -->
+    <script src = 'assets/js/script.js' defer></script>
+
+    <!-- Navigations -->
+    <header>
+
+        <!-- === Visible Menu === -->
+        <nav class = 'top-nav'>
+            <!-- Left -->
+            <button id = 'hamburger-btn' class = 'hamburger-btn'>&#x2630;</button>
+
+            <!-- Middle -->
+            <a href = 'index.html'>
+                <img class = 'logo-img nav' src = 'assets/media/wabisabi_logo_white.png' alt = 'WABI SABI JP'>
+            </a>
+
+
+            <!-- Right -->
+            <!-- [Future Checkout Button?] -->
+        </nav>
+
+        <!-- === Hidden Left Menu === -->
+        <!-- Overlay to allow user to click outside menu to close -->
+        <div id = 'nav-overlay' class = 'nav-overlay'></div>
+
+        <nav id = 'hidden-nav' class = 'hidden-nav'>
+            <!-- Exit Button -->
+            <button id = 'nav-close-btn'>&times;</button>
+
+            <!-- Page Links -->
+            <a class = 'navLink home' href = 'index.html'>Home</a>
+            <a class = 'navLink products' href = 'pages/products.html'>Products</a>
+            <a class = 'navLink contact' href = 'pages/contact.html'>Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h3>Home</h3>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Left -->
+        <a class = 'footer-home' href = 'index.html'>
+            <img class = 'logo-img footer' src = 'assets/media/wabisabi_title_white.png' alt = 'WABI SABI JP'>
+        </a>
+
+        <!-- Middle -->
+        <section class = 'footer-pages'>
+            <h2>- Pages -</h2>
+            <a class = 'navLink home' href = 'index.html'>Home</a>
+            <a class = 'navLink products' href = 'pages/products.html'>Products</a>
+            <a class = 'navLink contact' href = 'pages/contact.html'>Contact</a>
+        </section>
+
+        <!-- Right -->
+        <section>
+            <h2>- Socials -</h2>
+            <div class = 'social-logo'>
+                <a class = 'instagram' href = 'https://www.instagram.com/' target = '_blank'>
+                    <img class = 'instagram-img' src = 'assets/media/Instagram.png' alt = 'Instagram'>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bottom -->
+        <p class = 'copyright-message'>&copy; WabiSabi.jp</p>
+
+    </footer>
+    
+</body>
+</html>
