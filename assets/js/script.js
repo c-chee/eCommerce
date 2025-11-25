@@ -1,10 +1,10 @@
 
 
 // === Hamburger Menu ===
-const hiddenNav   = document.getElementById('hidden-nav');
-const hamburgerNav   = document.getElementById('hamburger-btn');
-const closeNavBtn    = document.getElementById('nav-close-btn');
-const navOverlay  = document.getElementById('nav-overlay'); // Allows close when clicking outside of hidden nav
+const hiddenNav = document.getElementById('hidden-nav');
+const hamburgerNav = document.getElementById('hamburger-btn');
+const closeNavBtn = document.getElementById('nav-close-btn');
+const navOverlay = document.getElementById('nav-overlay'); // Allows close when clicking outside of hidden nav
 
 // Open menu
 function openHiddenNav() {
@@ -24,3 +24,18 @@ function closeHiddenNav() {
 hamburgerNav.addEventListener('click', openHiddenNav);
 closeNavBtn.addEventListener('click', closeHiddenNav);
 navOverlay.addEventListener('click', closeHiddenNav);
+
+
+// === Hero Scroll Down ===
+const scrollToAbout = document.getElementById('scroll-to-about');
+
+scrollToAbout.addEventListener('click', () => {
+    const aboutSection = document.getElementById('about-section');
+    const offset = 130; // Adjust this as needed
+    const targetPosition = aboutSection.offsetTop - offset;
+
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+});

@@ -6,19 +6,25 @@ body {
 }
 
 header {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 8em;
+    background-color: black;
     box-shadow: 0px 1px 5px rgb(62, 62, 62); /* x y blur spread color*/
+    z-index: 50;
+    top: 0;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    width: 100vw;
     min-height: 100vh;
     justify-content: start;
+    margin-top: 8em;
 }
 
 footer {
@@ -69,7 +75,7 @@ footer {
     width: 250px;
     height: 100vh;
     left: -250px; /* Hides outisde the screen */
-    background-color: #763300;
+    background-color: #7e3700;
     padding: 1.5em 2em;
     box-sizing: border-box;
     transition: left 0.4s ease;
@@ -150,7 +156,9 @@ footer h2 {
     height: auto;
 }
 
-/* === Main === */
+/* ======================= 
+        Home 
+========================== */
 /* -- Hero Section -- */
 .hero-section {
     width: 100vw;
@@ -166,15 +174,62 @@ footer h2 {
 
 .hero-overlay {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.106);
+    background: rgba(0, 0, 0, 0.19);
     color: white;
+    text-shadow: 0 0 10px black;
     font-size: 2em;
     z-index: 2;
     position: absolute;
+    font-family: "Walter Turncoat", cursive;
 }
 
+.hero-overlay p {
+    margin-bottom: 14em;
+}
+
+.hero-scroll {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-scroll img {
+    max-width: 2em;
+    height: auto;
+    object-fit: cover;
+    filter: drop-shadow(0 0px 10px black);
+}
+
+/* -- About Section -- */
+.about-section {
+    margin: 2em;
+    padding-top: 3em;
+    height: 30em; /* For Testing*/
+}
+
+/* -- Product Preview -- */
+.productPreview-section {
+    margin: 2em;
+    padding-top: 3em;
+    height: 30em; /* For Testing*/
+}
+
+/* ======================= 
+        Products 
+========================== */
+
+/* ======================= 
+        Contact 
+========================== */
+
+/* ======================= 
+        Breakpoints 
+========================== */
 
