@@ -12,7 +12,6 @@ const grid = document.getElementById('product-grid');
 const contactSection = document.querySelector('.contact-section');
 const contactForm = document.getElementById('contact-form');
 const validationMessage = document.getElementById('validation-message');
-validationMessage.style.color = 'red';
 const thankyouMessage = document.getElementById('thankyou-section');
 
 
@@ -56,7 +55,6 @@ if (grid) {
     fetch('../assets/data/products.json')
     .then(response => response.json())
     .then(products => { 
-        const grid = document.getElementById('product-grid');
 
         products.forEach(product => {
             const item = document.createElement('div');
@@ -77,42 +75,46 @@ if (grid) {
 }
 
 // === Contact Form ===
-contactForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Ensures the form doesn’t submit if validation fails
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Ensures the form doesn’t submit if validation fails
 
-    // -- Grab values --
-    const formName = document.getElementById('name-input').value.trim(); // - Trim removes extra space
-    const formEmail = document.getElementById('email-input').value.trim();
-    const formMessage = document.getElementById('message-input').value.trim();
+        // -- Grab values --
+        const formName = document.getElementById('name-input').value.trim(); // - Trim removes extra space
+        const formEmail = document.getElementById('email-input').value.trim();
+        const formMessage = document.getElementById('message-input').value.trim();
 
-    // -- Validations --
-    // Extra checks for if a required field is left empty or if only spaces are typed
-    if (formName === '' || formEmail === '' || formMessage === '') {
-        validationMessage.textContent = 'Form is left empty! Please fill out required field.';
-        return;
-    }
+        // -- Validations --
+        // Extra checks for if a required field is left empty or if only spaces are typed
+        if (formName === '' || formEmail === '' || formMessage === '') {
+            validationMessage.style.color = 'red';
+            validationMessage.textContent = 'Form is left empty! Please fill out required field.';
+            return;
+        }
 
-    // Checks for email formatting
-    const emailFormat = /\S+@\S+\.\S+/;
+        // Checks for email formatting
+        const emailFormat = /\S+@\S+\.\S+/;
 
-    // If the email does not match the formatt, display error
-    if(!emailFormat.test(formEmail)) {
-        validationMessage.textContent = 'Please enter a valid email.'
-        return;
-    }
+        // If the email does not match the formatt, display error
+        if(!emailFormat.test(formEmail)) {
+            validationMessage.textContent = 'Please enter a valid email.'
+            return;
+        }
 
-    // Clear any validatiion messages
-    validationMessage.textContent = '';
+        // Clear any validatiion messages
+        validationMessage.textContent = '';
 
-    // Swap visibility between form and thankyou section
-    contactSection.style.display = 'none';
-    thankyouMessage.style.display = 'block'; 
+        // Swap visibility between form and thankyou section
+        contactSection.style.display = 'none';
+        thankyouMessage.style.display = 'block'; 
 
-    // Revert back to normal after 3 seconds
-    setTimeout(() => {
-        thankyouMessage.style.display = 'none';
-        contactSection.style.display = 'block';
-        contactForm.reset();
-    }, 3000);
+        // Revert back to normal after 3 seconds
+        setTimeout(() => {
+            thankyouMessage.style.display = 'none';
+            contactSection.style.display = 'block';
+            contactForm.reset();
+        }, 3000);
 
-});
+    });
+
+}

@@ -330,6 +330,10 @@ footer h2 {
     padding: 0.5em 1em;
 }
 
+#validation-message {
+    margin: 1em 0;;
+}
+
 /* -- Thank You Section */
 .thankyou-section {
     display: none;
@@ -362,7 +366,7 @@ footer h2 {
 @media (min-width: 600px) {
     /*  */
     .grid {
-        grid-template-columns: repeat(2. 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
