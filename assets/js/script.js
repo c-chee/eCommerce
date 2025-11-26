@@ -13,6 +13,10 @@ const contactSection = document.querySelector('.contact-section');
 const contactForm = document.getElementById('contact-form');
 const validationMessage = document.getElementById('validation-message');
 const thankyouMessage = document.getElementById('thankyou-section');
+// const totalProuctDisplay = document.getElementById('product-total-sort');
+const totalProductDisplay = document.getElementById('total-number-items');
+let allProducts = []; // This will hold product and used to help sort
+const sortDropdown = document.getElementById('sort-dropdown');
 
 
 // === Hamburger Menu ===
@@ -51,27 +55,74 @@ if (scrollToAbout) {
 }
 
 // === Product Grid ===
+// --- Grid Display Funtion ---
+function displayProducts(productList) {
+    // Clear existing or default display
+    grid.innerHTML = '';
+
+    // --- Displays Products ---
+    productList.forEach(product => {
+        const item = document.createElement('div');
+        item.classList.add('product');
+
+        item.innerHTML = 
+            `<img src = '${product.image}' alt = '${product.name}'>
+            <h3>${product.name}</h3>
+            <p class = 'product-price'>$${product.price.toFixed(2)}</p> 
+            <p class = 'product-desc'>${product.description}</p>`;
+        // The .toFixed(2) allows the price to display 0, mut disspay 2 decimal places
+
+
+        grid.appendChild(item);
+    });
+}
+
+// If a product grid exists
 if (grid) {
     fetch('../assets/data/products.json')
     .then(response => response.json())
     .then(products => { 
 
-        products.forEach(product => {
-            const item = document.createElement('div');
-            item.classList.add('product');
+        // --- Save products for sorting ---
+        allProducts = products;
 
-            item.innerHTML = 
-                `<img src = '${product.image}' alt = '${product.name}'>
-                <h3>${product.name}</h3>
-                <p class = 'product-price'>$${product.price.toFixed(2)}</p> 
-                <p class = 'product-desc'>${product.description}</p>`;
-            // The .toFixed(2) allows the price to display 0, mut disspay 2 decimal places
+        // --- Displays total number of products ---
+        totalProductDisplay.textContent = `${products.length} items`;
 
+        // --- Displays Products ---
+        displayProducts(products);
 
-            grid.appendChild(item);
-        });
     })
     .catch(err => console.error("Error loading products:", err));
+
+    // --- Sort Display ---
+    // Read and and compare whhich option was chossen. Based on the option, sort and re-arrange display.
+    const sortDropdown = document.getElementById('sort-dropdown');
+    sortDropdown.addEventListener('change', (event) => {
+        const sortValue = event.target.value;
+
+        let sortedProducts = [...allProducts];
+
+        // Switch casae for options. If case is true, sort...
+        switch (sortValue) {
+            case "a-z":
+                sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+                break;
+            case "z-a":
+                sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+                break;
+            case "low-high":
+                sortedProducts.sort((a, b) => a.price - b.price);
+                break;
+            case "high-low":
+                sortedProducts.sort((a, b) => b.price - a.price);
+                break;
+            default:
+                sortedProducts = [...allProducts]; // default display is fetured/ initial state
+        }
+
+        displayProducts(sortedProducts);
+    });
 }
 
 // === Contact Form ===

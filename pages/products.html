@@ -60,7 +60,20 @@
     <main>
         <h2 class = 'page-title'>Products</h2>
 
-        <!-- Filter and Grid Style -->
+        <!-- Total number of products and Sort -->
+        <section id = 'product-total-sort'>
+            <!-- Total Number -->
+            <p id = 'total-number-items'></p>
+
+            <!-- Sort Dropdown -->
+            <select id='sort-dropdown'>
+                <option value='featured'>Featured</option>
+                <option value='a-z'>Alphabetically, A-Z</option>
+                <option value='z-a'>Alphabetically, Z-A</option>
+                <option value='low-high'>Price, low to high</option>
+                <option value='high-low'>Price, high to low</option>
+            </select>
+        </section>
 
         <!-- Product Grid to be loadedd from JSON -->
         <section id = 'product-grid' class = 'grid'>

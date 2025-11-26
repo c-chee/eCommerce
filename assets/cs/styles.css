@@ -276,6 +276,23 @@ footer h2 {
     margin: 0;
 }
 
+#product-total-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+#sort-dropdown {
+    font-family: "Montserrat", sans-serif;
+    padding: 0.5em 1em;
+    border: solid white;
+    background-color: black;
+    color: white;
+    border-radius: 0.2em;
+}
+
+
 /* ======================= 
         Contact 
 ========================== */
@@ -480,6 +497,10 @@ footer h2 {
     #product-grid div:hover {
         cursor: pointer;
         transform: translateY(-7px) scale(1.05);
+    }
+
+    #sort-dropdown {
+        cursor: pointer;
     }
 
 }
