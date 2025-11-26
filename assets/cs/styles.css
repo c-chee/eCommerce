@@ -469,6 +469,13 @@ footer h2 {
         width: 50em;
     }
 
+    .submit-btn:hover {
+        cursor: pointer;
+        background-color: #f16e0b;
+        color: black;
+        border: black;
+    }
+
     /* --- Products --- */
     #product-grid div:hover {
         cursor: pointer;
