@@ -60,8 +60,10 @@ if (grid) {
             item.innerHTML = 
                 `<img src = '${product.image}' alt = '${product.name}'>
                 <h3>${product.name}</h3>
-                <p class = 'price'>$${product.price}</p>
-                <p>${product.description}</p>`;
+                <p class = 'product-price'>$${product.price.toFixed(2)}</p> 
+                <p class = 'product-desc'>${product.description}</p>`;
+            // The .toFixed(2) allows the price to display 0, mut disspay 2 decimal places
+
 
             grid.appendChild(item);
         });

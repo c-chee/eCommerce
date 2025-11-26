@@ -34,6 +34,7 @@ footer {
     text-align: center;
     justify-items: center;
     gap: 1em;
+    margin-top: 10em;
 }
 
 /* === Top Navigations === */
@@ -156,6 +157,12 @@ footer h2 {
     height: auto;
 }
 
+.page-title {
+    margin-top: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 /* ======================= 
         Home 
 ========================== */
@@ -236,6 +243,7 @@ footer h2 {
 .grid div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 1em;
     border-radius: 0.2em;
     background-color: rgba(255, 255, 255, 0.053);
@@ -248,6 +256,13 @@ footer h2 {
     border-radius: 0.2em;
 }
 
+.grid h3 {
+    text-align: center;
+}
+
+.grid .product-price {
+    margin: 0;
+}
 
 
 /* ======================= 
