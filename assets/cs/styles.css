@@ -36,6 +36,7 @@ footer {
     justify-items: center;
     gap: 1em;
     margin-top: 10em;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* === Top Navigations === */
@@ -93,6 +94,10 @@ footer {
     text-decoration: none;
     font-size: 1.25em;
     text-transform: uppercase;
+    padding: 0;
+    display: block;
+    padding: 0.5em 0em;
+    margin: 0;
 }
 
 .hidden-nav.open {
@@ -155,7 +160,8 @@ footer h2 {
     color: white;
     text-decoration: none;
     font-size: 1em;
-    padding: 0.25em;
+    padding: 0.5em 0;
+    margin: 0;
 }
 
 .instagram-img {
@@ -400,13 +406,17 @@ footer h2 {
 }
 
 /* ======================= 
-        Contact 
+        About 
 ========================== */
 .about {
     display: flex;
     flex-direction: column;
     margin: 2em;
     letter-spacing: 1px;
+}
+
+.about-why img {
+    width: 10em;
 }
 
 
@@ -417,6 +427,11 @@ footer h2 {
     /* --- Products --- */
     .grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- Contact --- */
+    .contact-section {
+        width: 30em;
     }
 }
 
@@ -534,6 +549,16 @@ footer h2 {
     /* --- Products --- */
     .grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* --- Home --- */
+    .hero-overlay p {
+        font-size: 2.5em;
+        padding-bottom: 3em;
+    }
+
+    .hero-scroll img {
+        max-width: 4em;
     }
 }
 
