@@ -265,10 +265,96 @@ footer h2 {
     margin: 0;
 }
 
-
 /* ======================= 
         Contact 
 ========================== */
+/* -- Form -- */
+.page-desc {
+    margin: 2em;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.053);
+    border-radius: 0.2em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#contact-form label {
+    margin-bottom: 0.5em;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#contact-form textarea {
+    height: 8em;
+}
+
+.submit-btn {
+    align-self: center;
+    padding: 0.5em 2em;
+    font-size: 1em;
+    font-weight: 600;
+    background: transparent;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 0.3em;
+    /* align-self: flex-end; */
+}
+
+#contact-form label, 
+.submit-btn{
+    display: block;
+    font-family: "Montserrat", sans-serif;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+/* -- Thank You Section */
+.thankyou-section {
+    display: none;
+    flex-direction: column;
+    margin: 2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.053);
+    border-radius: 0.2em;
+}
+
+.thankyou-section p {
+    font-weight: 600;
+    align-self: flex-end;
+    margin: 0;
+    padding-top: 3em;
+    
+}
+
+.thankyou-section img {
+    width: 200px;
+    height: 75px;
+    object-fit: cover;
+    align-self: flex-end;
+}
+
 
 /* ======================= 
         Breakpoints 

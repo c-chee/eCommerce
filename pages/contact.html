@@ -55,6 +55,36 @@
     <!-- Main Content -->
     <main>
         <h2 class = 'page-title'>Contact</h2>
+        <p class = 'page-desc'>Have a question or inquiry? Contact us here through this form!</p>
+
+        <section class = 'contact-section'>
+            <form id = 'contact-form'>
+                <!-- Name -->
+                <label for = 'name'>Name: </label>
+                <input type = 'text' id = 'name-input' name = 'name' required>
+
+                <!-- Email -->
+                <label for = 'email'>Email: </label>
+                <input type = 'text' id = 'email-input' name = 'email' required>
+
+                <!-- Message -->
+                <label for = 'message'>Message: </label>
+                <textarea id = 'message-input' name = 'message' required></textarea>
+
+                <!-- Submit -->
+                <button class = 'submit-btn' type = 'submit'>Submit</button>
+
+                <!-- Placeholder -->
+                <div id = 'validation-message'></div> 
+            </form>
+        </section>
+
+        <!-- Thank You Message -->
+        <section id = 'thankyou-section' class = 'thankyou-section'>
+            <h3> Your form has been submitted successfully. Thank You!</h3>
+            <p>From our team at,</p>
+            <img src = '../assets/media/wabisabi_title_white.png' alt="WabiSabi.jp">
+        </section>
 
     </main>
 
