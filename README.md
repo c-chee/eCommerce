@@ -9,6 +9,6 @@
 - To launch site, open from index.html
 
 ## Deployed
-**AWS Amplify:**https://main.d2gm0gtsp6xu7c.amplifyapp.com/
+**AWS Amplify:** https://main.d2gm0gtsp6xu7c.amplifyapp.com/
 
 
