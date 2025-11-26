@@ -24,6 +24,7 @@ main {
     width: 100vw;
     min-height: 100vh;
     justify-content: start;
+    align-items: center;
     margin-top: 8em;
 }
 
@@ -47,6 +48,10 @@ footer {
     text-align: center;
     justify-items: center;
     margin: 0;
+}
+
+.bottom-nav {
+    display: none;
 }
 
 .hamburger-btn {
@@ -197,10 +202,6 @@ footer h2 {
     font-family: "Walter Turncoat", cursive;
 }
 
-.hero-overlay p {
-    margin-bottom: 14em;
-}
-
 .hero-scroll {
     background: none;
     border: none;
@@ -220,14 +221,24 @@ footer h2 {
 .about-section {
     margin: 2em;
     padding-top: 3em;
-    height: 30em; /* For Testing*/
+}
+
+.about-section h3 {
+    text-transform: uppercase;
+}
+
+.about-section p {
+    letter-spacing: 1px;
 }
 
 /* -- Product Preview -- */
 .product-preview-section {
     margin: 2em;
     padding-top: 3em;
-    height: 30em; /* For Testing*/
+}
+
+.product-preview-section h3 {
+    text-transform: uppercase;
 }
 
 /* ======================= 
@@ -252,7 +263,7 @@ footer h2 {
 
 .grid img {
     width: 100%;
-    height: auto;
+    height: 230px;
     object-fit: cover;
     border-radius: 0.2em;
 }
@@ -271,6 +282,7 @@ footer h2 {
 /* -- Form -- */
 .page-desc {
     margin: 2em;
+    text-align: center;
 }
 
 .contact-section {
@@ -364,9 +376,111 @@ footer h2 {
         Breakpoints 
 ========================== */
 @media (min-width: 600px) {
-    /*  */
+    /* --- Products --- */
     .grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 850px) {
+    /* --- Navigation --- */
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 9em;
+    }
+
+    .top-nav {
+        align-items: start;
+        justify-content: flex-start;
+    }
+
+    .bottom-nav {
+        visibility: visible;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25em;
+        font-weight: 500;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        margin-bottom: 1em;
+    }
+
+    .bottom-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0 1.5em;
+    }
+
+    .bottom-nav a:hover {
+        cursor: pointer;
+        color: #f16e0b;
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+
+    .hamburger-btn {
+        visibility: hidden;
+    }
+
+    /* --- Footer --- */
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        margin: 10em 2em 0em 2em;
+        align-items: start;
+    }
+    
+    footer .footer-home {
+        justify-self: center;
+    }
+
+    footer .copyright-message {
+        grid-column: 1 / 4;
+        margin-top: 5em ;
+    }
+
+    footer .nav-link:hover {
+        color: #f16e0b;
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
+
+    footer .instagram:hover {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+
+
+    /* --- Home --- */
+    .hero-overlay p {
+        font-size: 2em;
+        margin-bottom: 6.5em;
+    }
+
+    .hero-scroll:hover {
+        cursor: pointer;
+    }
+
+    /* --- Contact --- */
+    .contact-section {
+        width: 50em;
+    }
+
+    /* --- Products --- */
+    #product-grid div:hover {
+        cursor: pointer;
+        transform: translateY(-7px) scale(1.05);
+    }
+
+}
+
+@media (min-width: 1200px) {
+    /* --- Products --- */
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
