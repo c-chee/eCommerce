@@ -241,6 +241,19 @@ footer h2 {
     letter-spacing: 1px;
 }
 
+.learn-more-btn {
+    color: white;
+    /* align-self: center; */
+    padding: 0.5em 2em;
+    font-size: 1em;
+    font-weight: 600;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 0.3em;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
 /* -- Product Preview -- */
 .product-preview-section {
     margin: 2em;
@@ -424,6 +437,14 @@ footer h2 {
         Breakpoints 
 ========================== */
 @media (min-width: 600px) {
+    /* --- Home --- */
+    .learn-more-btn:hover {
+        cursor: pointer;
+        background-color: #f16e0b;
+        color: black;
+        border: black;
+    }
+    
     /* --- Products --- */
     .grid {
         grid-template-columns: repeat(2, 1fr);
