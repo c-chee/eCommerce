@@ -202,6 +202,10 @@ footer h2 {
     font-family: "Walter Turncoat", cursive;
 }
 
+.hero-overlay p {
+    padding-bottom: 12em;
+}
+
 .hero-scroll {
     background: none;
     border: none;
@@ -474,7 +478,11 @@ footer h2 {
     /* --- Home --- */
     .hero-overlay p {
         font-size: 2em;
-        margin-bottom: 6.5em;
+        padding-bottom: 10em;
+    }
+
+    .hero-scroll img {
+        max-width: 4em;
     }
 
     .hero-scroll:hover {
