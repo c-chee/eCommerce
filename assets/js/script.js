@@ -1,11 +1,16 @@
 
 
-// === Hamburger Menu ===
 const hiddenNav = document.getElementById('hidden-nav');
 const hamburgerNav = document.getElementById('hamburger-btn');
 const closeNavBtn = document.getElementById('nav-close-btn');
 const navOverlay = document.getElementById('nav-overlay'); // Allows close when clicking outside of hidden nav
 
+const scrollToAbout = document.getElementById('scroll-to-about'); 
+
+const grid = document.getElementById('product-grid');
+
+
+// === Hamburger Menu ===
 // Open menu
 function openHiddenNav() {
     hiddenNav.classList.remove('close');
@@ -27,15 +32,39 @@ navOverlay.addEventListener('click', closeHiddenNav);
 
 
 // === Hero Scroll Down ===
-const scrollToAbout = document.getElementById('scroll-to-about');
+// Only on home page, so a check is needed that that an error does not occur
+if (scrollToAbout) { 
+    scrollToAbout.addEventListener('click', () => {
+        const aboutSection = document.getElementById('about-section');
+        const offset = 130;
+        const targetPosition = aboutSection.offsetTop - offset;
 
-scrollToAbout.addEventListener('click', () => {
-    const aboutSection = document.getElementById('about-section');
-    const offset = 130; // Adjust this as needed
-    const targetPosition = aboutSection.offsetTop - offset;
-
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
+        window.scrollTo({
+            top: targetPosition, // Creates an offset so the contnet doesn't hide behin the nav
+            behavior: 'smooth' // smooth scrolling
+        });
     });
-});
+}
+
+// === Product Grid ===
+if (grid) {
+    fetch('../assets/data/products.json')
+    .then(response => response.json())
+    .then(products => { 
+        const grid = document.getElementById('product-grid');
+
+        products.forEach(product => {
+            const item = document.createElement('div');
+            item.classList.add('product');
+
+            item.innerHTML = 
+                `<img src = '${product.image}' alt = '${product.name}'>
+                <h3>${product.name}</h3>
+                <p class = 'price'>$${product.price}</p>
+                <p>${product.description}</p>`;
+
+            grid.appendChild(item);
+        });
+    })
+    .catch(err => console.error("Error loading products:", err));
+}

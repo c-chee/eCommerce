@@ -1,0 +1,74 @@
+[
+    {
+        "image": "../assets/media/mascot-sticker-white.PNG",
+        "name": "Mascot Sticker (ver. White)",
+        "price": 3.00,
+        "description": "Vinyl decal designed specifically for your car."
+    },
+    {
+        "image": "../assets/media/mascot-sticker.PNG",
+        "name": "Mascot Sticker (ver. Black)",
+        "price": 3.00,
+        "description": "Vinyl decal designed specifically for your car."
+    },
+    {
+        "image": "../assets/media/bumper-sticker-1.PNG",
+        "name": "Mascot Bumper sticker (ver. Black)",
+        "price": 7.00,
+        "description": "Join the dark side by adding a durable, weather-resistant bumper stickers to your ride."
+    },
+    {
+        "image": "../assets/media/bumper-sticker-white-1.PNG",
+        "name": "Masot Bumper sticker (ver. White)",
+        "price": 7.00,
+        "description": "Add personality to your ride with a durable, weather-resistant bumper stickers."
+    },
+    {
+        "image": "../assets/media/imperfection-sticker-1.PNG",
+        "name": "Beauty In Imperfection Bumper Sticker",
+        "price": 7.00,
+        "description": "Express your inner Wabi Sabi on your car with our durable vinyl sticker. "
+    },
+    {
+        "image": "../assets/media/86-sticker-1.PNG",
+        "name": "86 Sticker",
+        "price": 4.00,
+        "description": "Iconic Toyota 86 vinyl sticker."
+    },
+    {
+        "image": "../assets/media/shirt-mascot-1.PNG",
+        "name": "Mascot T-Shirt",
+        "price": 25.99,
+        "description": "Express yourself with a t-shirt featuring our re pandda moscot."
+    },
+    {
+        "image": "../assets/media/tote-black-2.PNG",
+        "name": "Mascot Tote Bag (ver. Black)",
+        "price": 30.00,
+        "description": "Carry your essentials in style with this durable, eco-friendly canvas tote bag."
+    },
+    {
+        "image": "../assets/media/tote-cream-2.PNG",
+        "name": "Mascot Tote Bag (ver. Cream)",
+        "price": 30.00,
+        "description": "Carry your essentials in style with this durable, eco-friendly canvas tote bag."
+    },
+    {
+        "image": "../assets/media/plate-cover-1.PNG",
+        "name": "Wabi Sabi License Plate Frame",
+        "price": 24.99,
+        "description": "Style your license plate with our Wabi Sabi Frame!"
+    },
+    {
+        "image": "../assets/media/cup-1.PNG",
+        "name": "Wabi Sabi Mug",
+        "price": 18.50,
+        "description": "Enjoy your favorite hot or cold beverages with this durable, everyday ceramic mug."
+    },
+    {
+        "image": "../assets/media/tsurikawa-1.PNG",
+        "name": "Pixel Heart Tsurikawa (ver. Red)",
+        "price": 9.99,
+        "description": "Decorative handle originally found on Japanese trains, now used as a stylish accessory for cars."
+    }
+]
