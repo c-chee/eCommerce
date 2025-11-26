@@ -276,6 +276,10 @@ footer h2 {
     text-align: center;
 }
 
+.grid p {
+    letter-spacing: 1px;
+}
+
 .grid .product-price {
     margin: 0;
 }
@@ -304,6 +308,7 @@ footer h2 {
 .page-desc {
     margin: 2em;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .contact-section {
@@ -313,6 +318,7 @@ footer h2 {
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.053);
     border-radius: 0.2em;
+    letter-spacing: 1px;
 }
 
 .contact-form {
@@ -344,6 +350,7 @@ footer h2 {
     color: #fff;
     border: 2px solid white;
     border-radius: 0.3em;
+    letter-spacing: 1px;
     /* align-self: flex-end; */
 }
 
@@ -390,6 +397,16 @@ footer h2 {
     height: 75px;
     object-fit: cover;
     align-self: flex-end;
+}
+
+/* ======================= 
+        Contact 
+========================== */
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    letter-spacing: 1px;
 }
 
 
